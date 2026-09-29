@@ -61,7 +61,7 @@ Pick a **Resource** and an **Operation**. Each n8n input item starts one Apify r
 
 | Resource | Operation | Fields | Returns |
 |---|---|---|---|
-| **Place** | Search | **Search Query** (required) - The local search phrase, e.g. 'coffee shops in Austin' or 'dentists in Berlin'. Include the location for best results | One item per place, about 20 per search |
+| **Place** | Search | **Search Query** (required) - The local search phrase, e.g. 'coffee shops in Austin' or 'dentists in Berlin'. Include the location for best results<br>**Max Results** - How many places to return (1-20). Google shows about 20 per search | One item per place, about 20 per search |
 
 ### Options
 
@@ -96,17 +96,17 @@ Example item (shortened):
 
 ```json
 {
-  "name": "Epoch Coffee",
+  "name": "Cosmic Pickle",
   "sponsored": false,
-  "rating": 4.5,
-  "reviews": 2500,
-  "price": "1–10 $",
+  "rating": 4.7,
+  "reviews": 4400,
+  "price": "$10–20",
   "category": "Coffee shop",
-  "address": "221 W N Loop Blvd",
+  "address": "121 Pickle Rd",
   "phone": null,
   "website": null,
   "hours": null,
-  "review_snippet": "Great coffee , friendly people, classic Austin hospitality.",
+  "review_snippet": "There is no food, but the drinks are great, and the vibe is so Austin 👌.",
   "position": 1
 }
 ```
@@ -133,6 +133,7 @@ To try the node in a minute, copy the workflow below, paste it into the n8n edit
         "resource": "place",
         "operation": "search",
         "keyword": "coffee shops in Austin",
+        "maxResults": 5,
         "options": {}
       },
       "name": "Google Maps Scraper",
@@ -179,3 +180,4 @@ Tested with n8n 2.40 (self-hosted).
 
 - 0.1.0: Initial release
 - 0.1.1: First release published from GitHub Actions with an npm provenance statement
+- 0.1.2: Max Results field
