@@ -1,0 +1,32 @@
+{
+	"node": "n8n-nodes-scrapeunblocker-google-maps-local.googleMapsScraper",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Sales",
+		"Data & Storage"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-google-maps-local#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-google-maps-local#readme"
+			}
+		]
+	},
+	"alias": [
+		"google maps",
+		"maps",
+		"places",
+		"local business",
+		"leads",
+		"ratings",
+		"reviews",
+		"apify",
+		"scrapeunblocker"
+	]
+}

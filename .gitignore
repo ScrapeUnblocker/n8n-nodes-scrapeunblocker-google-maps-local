@@ -1,0 +1,35 @@
+# Dependency directories
+node_modules
+jspm_packages/
+
+# Build output (Compiled JS)
+dist/
+out/
+
+# TypeScript/Build Cache
+*.tsbuildinfo
+.eslintcache
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# n8n specific (if you run a local instance for testing)
+.n8n/
+
+# AI
+.claude/
+
+# npm pack tarballs
+*.tgz
