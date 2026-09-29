@@ -41,6 +41,7 @@ function buildActorInput(
 	switch (`${resource}:${operation}`) {
 		case 'place:search': {
 			input.keyword = requireString.call(this, 'keyword', 'Search Query', itemIndex);
+			input.max_results = this.getNodeParameter('maxResults', itemIndex);
 			break;
 		}
 		default:
@@ -122,6 +123,23 @@ export class GoogleMapsScraper implements INodeType {
 				placeholder: 'coffee shops in Austin',
 				description:
 					"The local search phrase, e.g. 'coffee shops in Austin' or 'dentists in Berlin'. Include the location for best results.",
+				displayOptions: {
+					show: {
+						resource: ['place'],
+						operation: ['search'],
+					},
+				},
+			},
+			{
+				displayName: 'Max Results',
+				name: 'maxResults',
+				type: 'number',
+				typeOptions: {
+					minValue: 1,
+					maxValue: 20,
+				},
+				default: 20,
+				description: 'How many places to return (1-20). Google shows about 20 per search.',
 				displayOptions: {
 					show: {
 						resource: ['place'],
